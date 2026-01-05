@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link href="img/robot-tab-logo.png" rel="icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap" rel="stylesheet">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  </head>
+  <body>
+    <header class="page-header">
+      <img src="img/robot-large-logo.png" alt="logo" class="robot">
+      <nav class="main-navigation page-header__item">
+        <ul role="menubar" class="navigation-list">
+          <li class="tab" role="presentation"><a href="/" role="menuitem" class="navigation-list__item">Home</a></li>
+          <li class="tab" role="presentation"><a href="about.html" role="menuitem" class="navigation-list__item">About</a></li>
+          <li class="tab" role="presentation"><a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a></li>
+          <li class="tab" role="presentation"><a href="projects.html" role="menuitem" class="navigation-list__item">Coding Projects</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="contact-info">
+      <form name="contact" method="POST" data-netlify-recaptcha="true" data-netlify="true" enctype="multipart/form-data" action="thank_you.html">
+        <h1 id="contact">Contact me</h1>
+        
+        <label for="Name">Name:</label>
+        <div class="field">
+          <input 
+            class="sent" 
+            type="text"  
+            id="Name" 
+            name="name" 
+            placeholder="Bob" 
+            required
+          >
+        </div>
+        
+        <label for="email">Email:</label>
+        <div class="field">
+          <input 
+            class="sent" 
+            type="email" 
+            id="email" 
+            name="email" 
+            maxlength="350" 
+            placeholder="bob@gmail.com" 
+            pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" 
+            required
+          >
+        </div>
+
+        <label for="phone">Phone Number:</label>
+        <div class="field">
+          <input 
+            class="sent" 
+            type="tel" 
+            id="phone" 
+            name="phone" 
+            maxlength="14" 
+            placeholder="(123)-456-7890"  
+            pattern="^\(\d{3}\)-\d{3}-\d{4}$" 
+          >
+        </div>
+
+        <label for="stakeholder">Stakeholder type:</label>
+        <div class="field">
+          <select id="stakeholder" name="stakeholder">
+            <option value="employer">Employer</option>
+            <option value="politician">Government official</option>
+            <option value="nonprofit">Non-Profit Organization</option>
+            <option value="corp">Investor</option>
+            <option value="individual">Individual interested</option>
+          </select>
+        </div>
+
+        <label for="textbox">Message:</label>
+        <div class="field">
+          <textarea 
+            class="sent" 
+            name="message" 
+            id="textbox" 
+            placeholder="message and description of your file attachments"
+          ></textarea>
+        </div>
+
+        <div class="field">
+          <label for="upload">Upload File:</label>
+          <input 
+            class="input-text" 
+            type="file" 
+            name="myfile" 
+            id="upload" 
+          >
+        </div>
+
+        <div class="field">
+            <div data-netlify-recaptcha="true"></div>
+        </div>
+
+        <div class="field">
+          <button type="submit" class="submit">Send</button>
+        </div>
+      </form>    
+    </div>
+
+    <footer class="page-footer">
+      <p>Find me on</p>
+      <div class="social-media">
+        <a class="icon" href="https://github.com/MatthewMonti"><img src="../img/github.png" alt="Matt's Github Profile"></a>
+        <a class="icon" href="https://www.linkedin.com/in/mbm1124"><img src="../img/linkedin.png" alt="Matt's Linkedin Profile"></a>
+      <p class="copyright">&copy;2025 all rights reserved.</p>
+    </footer>
+  </body>
+</html>
